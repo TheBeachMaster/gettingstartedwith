@@ -15,12 +15,11 @@
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ]
+        "commands": [{
+            "command": "extension.sayHello",
+            "title": "Hello World",
+            "category": "Hellos"
+        }]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
