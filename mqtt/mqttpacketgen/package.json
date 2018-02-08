@@ -1,0 +1,28 @@
+{
+    "name": "mqttpacketgen",
+    "version": "1.0.0",
+    "description": "Mqtt Packet -in HEX- Generation App",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheBeachMaster/gettingstartedwith.git"
+    },
+    "keywords": [
+        "MQTT",
+        "Hex",
+        "IoT"
+    ],
+    "author": "The Beachmaster",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TheBeachMaster/gettingstartedwith/issues"
+    },
+    "homepage": "https://github.com/TheBeachMaster/gettingstartedwith#readme",
+    "dependencies": {
+        "mqtt-packet": "^5.4.0"
+    }
+}
