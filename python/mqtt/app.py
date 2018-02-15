@@ -8,7 +8,7 @@ client = mqtt.Client("paho_mqtt_client")
 username = "paho"
 pahopassword = "pahopassword"
 
-# fired when ckeint succesfully subscribes to a topic
+# fired when client succesfully subscribes to a topic
 def on_subscribe(client, obj, mid, granted_qos):
     print("Subscribed:" + str(mid) + " " + str(granted_qos))
 
@@ -40,11 +40,12 @@ client.on_subscribe = on_subscribe
 client.on_connect = on_connect
 client.on_diconnect = on_diconnect
 
-# connction details (broker url, broker port, keepalive<=60)
+# connection details (broker url , broker port, keepalive<=60)
 client.connect(broker, brokerPort, 60)
 
-# strange behavior where the publsihing occurs faster than the on_connect event is fired first
+# strange behavior where the publsihing occurs before the on_connect event is fired first
 timer.sleep(5)
+
 counter = 0
 while (counter < 30):
     client.loop_start()
