@@ -40,7 +40,7 @@ client.on_subscribe = on_subscribe
 client.on_connect = on_connect
 client.on_diconnect = on_diconnect
 
-# connection details (broker url , broker port, keepalive<=60)
+# connection details (broker url , broker port, keepalive<=60 seconds)
 client.connect(broker, brokerPort, 60)
 
 # strange behavior where the publsihing occurs before the on_connect event is fired first
