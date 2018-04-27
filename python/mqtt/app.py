@@ -39,6 +39,7 @@ client.on_message = on_message
 client.on_subscribe = on_subscribe
 client.on_connect = on_connect
 client.on_diconnect = on_diconnect
+client.subscribe("paho/mqtt/data")
 
 # connection details (broker url , broker port, keepalive<=60 seconds)
 client.connect(broker, brokerPort, 60)
@@ -51,11 +52,12 @@ while (counter < 30):
     client.loop_start()
     payload = randomize_values(10,70)
     client.publish("paho/mqtt/data", payload)
-    client.subscribe("paho/mqtt/data")
+    timer.sleep(2)
     counter = counter + 1
     print(counter)
-    timer.sleep(2)
 
 print("Good Bye!")
+timer.sleep(3)
 client.loop_stop()
+timer.sleep(3)
 client.disconnect()
