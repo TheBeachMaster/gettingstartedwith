@@ -1,1 +1,1 @@
-gem 'africastalking-ruby'
+gem "AfricasTalking", :git => "git@github.com:AfricasTalkingLtd/africastalking-ruby.git"
